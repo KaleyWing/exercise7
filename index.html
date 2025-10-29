@@ -20,6 +20,7 @@
         font-family: "Jua", sans-serif;
         font-weight: 400;
         font-style: normal;
+        margin: 0;
       }
 
       h1 {
@@ -40,52 +41,79 @@
 
       h3 {
         text-align: center;
+        font-weight: 400px;
+        text-decoration: underline;
       }
-
+      
+      
       .container {
         width: 1200px;
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-areas:      
+        "title      image"
+        "ingredients steps";
+
+        grid-template-columns: 1fr 2fr;
+        gap: 10px;
         padding: 15px;
       }
-
-      .ingredients {
-        text-align: left;
-        width: 90%;
-        line-height: 1.5em;
-        font-weight: 500px;
-        background-color: #D3D3D3;
-        border-radius: 20px;
-        margin: 0 auto
+      
+      .container div.title{
+        text-align: center;
+        padding: 50px;
+        padding-top: 100px;
       }
 
-      .steps {
-        text-align: center;
+      .container div.ingredients {
+        text-align: left;
+        width: 90%;
+        background-color: #D3D3D3;
+        line-height: 1.5em;
+        font-weight: 500px;
+        border-radius: 20px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .container div.steps {
+        text-align: left;
         width: 90%;
         background-color: #D3D3D3;
         border-radius: 20px;
         padding: 20px;
-        margin: 0 auto
+        margin: 0 auto;
+        line-height: 1.6em;
       }
 
-      img {
-        display: block;
-        margin-left: auto;
-        margin-right: 0;
+      .container div.image {
+        text-align: center;
+        padding: 10px;
       }
       
+      .tips{
+        text-align: center;
+      }
       
     </style>
   </head>
 
   <body>
-    <h1>Spinach, Tofu and Sesame Stir-Fry</h1>
-
-    <h2>By: Martha Rose Shulman <br>Yield: 3 Servings</h2>
-
-    <img src="tofu_stirfry.jpg" height="300px" alt="tofu stir fry dish on a kitchen table">
-
+    
+  
     <div class="container">
+     
+      <div class="title">
+        <h1>Spinach, Tofu and Sesame Stir-Fry</h1>
+
+      <h2>By: Martha Rose Shulman</h2>
+      <h2>Yield: 3 Servings</h2>
+      </div>
+      
+
+      <div class="image">
+         <img src="tofu_stirfry.jpg" height="400px" alt="tofu stir fry dish on a kitchen table">
+      </div>
+      
       <div class="ingredients">
         <h3>Ingredients</h3>
         <ul>
@@ -102,7 +130,8 @@
 
       <div class="steps">
         <h3>Preparation</h3>
-        <p><strong>Step 1:</strong><br>
+        <p>Step 1:</p>
+        <p>
           Heat the canola oil over medium-high heat in a large nonstick skillet or wok, and add the tofu. Stir-fry until
           the tofu is lightly colored, three to five minutes, and add the garlic, ginger and chili flakes. Cook,
           stirring, until fragrant, about one minute, and add soy sauce to taste. Add the spinach and stir-fry until the
@@ -110,17 +139,18 @@
           heat.
         </p>
 
-        <p><strong>Step 2:</strong><br>
+        <p>Step 2:</p>
+        <p>
           Using tongs, transfer the spinach and tofu mixture to a serving bowl, leaving the liquid behind in the pan or
           wok. Drizzle with the sesame oil, and add more soy sauce as desired. Serve with rice or other grains, or
           noodles. You may also use it as a filling for whole wheat pita bread.
         </p>
-      </div>
-    </div>
-
-    <div class="tips">
-      <strong>Tip:</strong> Advance preparation: This is a last-minute preparation, but you can have your ingredients
+        <p>
+          <strong>Tip:</strong></p>
+        <p>Advance preparation: This is a last-minute preparation, but you can have your ingredients
       prepared well in advance.
+        </p>
+      </div>
     </div>
   </body>
 
